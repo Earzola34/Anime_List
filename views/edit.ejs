@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Your Anime</title>
 </head>
 <body>
-    
+    <form action="/animes/<%= anime._id %>?_method=PUT" method="post">
+        <fieldset>
+            <legend>Edit an anime
+            </legend>
+            <label>
+                Name:<input type="text" name="name" value="<%= anime.name %>" />
+            </label>
+            <label>
+                Type:<input type="checkbox" name="type" <% anime.type ? "checked" : "" %> />
+            </label>
+            <label>
+                Episodes:<input type="text" name="episodes" value="<%= anime.episodes %>" />
+            </label>
+        </fieldset>
+        <input type="submit" value="Update" />
+    </form>
 </body>
 </html>

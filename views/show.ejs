@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= anime.name %></title>
 </head>
 <body>
-    
+    <article>
+        <h1>
+            <%= anime.name %> 
+        </h1>
+        <h3>
+            Type? <%= anime.type %>
+        </h3>
+        <h3>
+            Episodes: <%= anime.episodes %>
+        </h3>
+        <a href="/animes/<%= anime._id %>/edit"><button>Edit</button></a>
+        <form action="/animes/<%= anime._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" />
+        </form>
+        <a href="/animes"> <button>Back to Main</button></a>
+    </article>
 </body>
 </html>

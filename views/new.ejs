@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create New Anime</title>
 </head>
 <body>
-    
+    <form action="/animes" method="post">
+        <input type="text" name="name" placeholder="Name" />
+        <label>
+            Type?
+            <input type="checkbox" name="type" />
+        </label>
+        <input type="text" name="episodes" placeholder="Episodes" />
+        <input type="submit" value="Create" />
+    </form>
 </body>
 </html>
